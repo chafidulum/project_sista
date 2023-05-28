@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +21,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('admin.content');
 });
+
+
+
+// mahasiswa
+route::resource('mahasiswa', MahasiswaController::class);
+route::resource('dosen', DosenController::class);
